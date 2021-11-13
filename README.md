@@ -23,7 +23,7 @@ Users should be able to:
 - It should be possible to mark items already payable or to remove them from the list;
 
 ### Screenshot
-[](./public/img/Screenshot--GitHub.jpg)
+![](./public/img/Screenshot--GitHub.jpg)
 
 ### Links
 - Live Site URL: [Live]()
