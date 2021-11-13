@@ -18,10 +18,12 @@
 ### The functionality
 Users should be able to:
 
-- Cteating user-storyes...
+- Add a title, expirence date and how much money they plane to expense;
+- Using three different colored cards, users can plan their expense in a hierarchical way;
+- It should be possible to mark items already payable or to remove them from the list;
 
 ### Screenshot
-[]()
+[](./public/img/Screenshot--GitHub.jpg)
 
 ### Links
 - Live Site URL: [Live]()
