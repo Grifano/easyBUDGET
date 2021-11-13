@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background-color: #e6fbff;
+  background-image: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");
+}
+
+#root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.showcase {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 2rem;
+  margin: 2rem;
+  background-color: rgba(237, 238, 247, 0.8);
+  border-radius: 2rem;
+  -webkit-backdrop-filter: blur(0.5rem);
+          backdrop-filter: blur(0.5rem);
+  -webkit-box-shadow: 8px 8px 30px rgba(0, 0, 0, 0.2);
+          box-shadow: 8px 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer span {
+  color: #c36c12;
+}
