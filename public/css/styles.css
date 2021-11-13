@@ -27,7 +27,7 @@ body {
   width: 100%;
 }
 
-.showcase {
+.dashboard {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;

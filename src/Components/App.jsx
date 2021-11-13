@@ -1,11 +1,11 @@
 import React from "react";
-import Showcase from "./Showcase";
+import Dashboard from "./Dashboard";
 import Footer from "./Footer";
 
 const App = () => {
 	return (
 		<>
-			<Showcase />
+			<Dashboard />
 			<Footer />
 		</>
 	)
