@@ -30,7 +30,7 @@ body {
 	flex-grow: 1;
 	padding: 2rem;
 	margin: 2rem;
-	background-color: rgba(237, 238, 247, 0.8);
+	background-color: rgba(237, 238, 247, 0.15);
 	border-radius: 2rem;
 	backdrop-filter: blur(0.5rem);
 	box-shadow: 8px 8px 30px rgba(0, 0, 0, 0.2);
@@ -45,3 +45,14 @@ body {
 		color: #c36c12;
 	}
 }
+/* Components */
+
+/* Logo */
+.logo {
+}
+/* /Logo */
+
+/* Buttons */
+.button {
+}
+/* /Buttons */
