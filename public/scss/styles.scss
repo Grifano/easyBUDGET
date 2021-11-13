@@ -13,8 +13,11 @@ html {
 
 body {
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-	background-color: hsl(189, 100%, 95%);
-	background-image: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");
+	background-color: #333333;
+	// background-image: url("https://www.transparenttextures.com/patterns/cardboard.png");
+	// background-image: url("https://www.transparenttextures.com/patterns/fresh-snow.png");
+	// background-image: url("https://www.transparenttextures.com/patterns/purty-wood.png");
+	background-image: url("https://www.transparenttextures.com/patterns/retina-wood.png");
 }
 #root {
 	display: flex;
