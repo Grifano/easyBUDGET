@@ -11,8 +11,8 @@ html {
 
 body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  background-color: #4a403a;
-  background-image: url("https://www.transparenttextures.com/patterns/purty-wood.png");
+  background-color: #e6cca9;
+  background-image: url("https://www.transparenttextures.com/patterns/retina-wood.png");
 }
 
 #root {
@@ -31,15 +31,42 @@ body {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  padding: 2rem;
-  margin: 2rem;
+  margin: 40px;
   margin-bottom: 0;
-  background-color: rgba(237, 238, 247, 0.15);
-  border-radius: 2rem;
-  -webkit-backdrop-filter: blur(15px);
-          backdrop-filter: blur(15px);
-  -webkit-box-shadow: 8px 8px 30px rgba(0, 0, 0, 0.2);
-          box-shadow: 8px 8px 30px rgba(0, 0, 0, 0.2);
+  background: rgba(237, 238, 247, 0.15);
+  -webkit-box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15);
+          box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border-radius: 20px;
+}
+
+.dashboard.dashboard--furnitura {
+  position: relative;
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: transparent;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.furnitura {
+  position: absolute;
+  width: 9.576vw;
+  height: 9.576vw;
+  background: rgba(228, 251, 255, 0.1);
+  border-radius: 100%;
+  z-index: -1;
+  bottom: 80px;
 }
 
 .footer {
@@ -57,4 +84,55 @@ body {
 /* Logo */
 /* /Logo */
 /* Buttons */
+.main-button {
+  padding: 0.5em 4.5em;
+  background: rgba(253, 111, 150, 0.7);
+  border: 2px solid #fd6f96;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  font-family: Helvetica;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+}
+
+.expand-button {
+  width: 38px;
+  height: 60px;
+  background: #f8f8f8;
+  border: 4px solid rgba(253, 111, 150, 0.6);
+  font-size: 0;
+}
+
 /* /Buttons */
+/* Aside */
+.aside {
+  padding: 2.5rem;
+  max-width: 25%;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0.3)));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.3) 100%);
+  border-radius: 20px;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+}
+
+.aside img {
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .aside {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+}
+
+/* /Aside */

@@ -1,10 +1,19 @@
 import React from "react";
+import Aside from "./Aside";
+import Furnitura from "./Furnitura";
 
 const Dashboard = () => {
 	return (
-		<main className="dashboard">
+		<>
+			<Furnitura position_1={"top"} position_2={"left"} />
+			<Furnitura position_1={"top"} position_2={"right"} />
+			<Furnitura position_2={"right"} />
+			<Furnitura position_2={"left"} />
 
-		</main>
+			<main className="dashboard">
+				<Aside />
+			</main>
+		</>
 	)
 }
 
