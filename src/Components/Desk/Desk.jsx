@@ -1,8 +1,9 @@
 import React from "react";
 import Aside from "./Aside";
 import Furnitura from "./Furnitura";
+import Content from "./Content";
 
-const Dashboard = () => {
+const Desk = () => {
 	return (
 		<>
 			<Furnitura position_1={"top"} position_2={"left"} />
@@ -10,11 +11,12 @@ const Dashboard = () => {
 			<Furnitura position_2={"right"} />
 			<Furnitura position_2={"left"} />
 
-			<main className="dashboard">
+			<main className="desk">
 				<Aside />
+				<Content />
 			</main>
 		</>
 	)
 }
 
-export default Dashboard;
+export default Desk;

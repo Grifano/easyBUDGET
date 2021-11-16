@@ -1,8 +1,6 @@
-import react from "react";
+import React from "react";
 
 const Furnitura = (props) => {
-
-	console.log(props);
 
 	const setPosition = {
 		[props.position_1]: 60,

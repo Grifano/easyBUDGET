@@ -1,12 +1,11 @@
 import React from "react";
-import Dashboard from "./Dashboard";
+import Desk from "./Desk/Desk";
 import Footer from "./Footer";
-import Furnitura from "./Furnitura";
 
 const App = () => {
 	return (
 		<>
-			<Dashboard />
+			<Desk />
 			<Footer />
 		</>
 	)
