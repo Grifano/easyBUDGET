@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './amountCounter.scss';
 
 const AmountCounter = (props) => {
 	const [amountData, setAmountData] = useState({
@@ -10,7 +11,6 @@ const AmountCounter = (props) => {
 
 	const showAddButton = (e) => {
 		setAddHiden(!isAddHiden);
-		console.log(isAddHiden);
 	}
 
 	const handleChanges = (event) => {
@@ -27,27 +27,20 @@ const AmountCounter = (props) => {
 
 	}
 
-	console.log(props.value);
-
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		setAddHiden(!isAddHiden);
 		return props.onSubmit(amountData);
 	}
 
-	// console.log("Test from AomuntCounter " + props.value);
-
 	return (
 
-		// idea for changing className
-		// <input className={this.state.editable ? "edit-profile" : "disable-profile disable"}
-
-		<form className="summary__form" onSubmit={handleSubmit}>
-			<fieldset className="summary__fieldset">
-				<div className="summary__input-wrapper">
+		<form className="amount-counter__form" onSubmit={handleSubmit}>
+			<fieldset className="amount-counter__fieldset">
+				<div className="amount-counter__input-wrapper">
 					<img src={props.icon} alt="" />
 					<input
-						className={isAddHiden ? "summary__input hiden" : "summary__input"}
+						className={isAddHiden ? "amount-counter__input hiden" : "amount-counter__input"}
 						name={props.name}
 						type="number"
 						step="0.01"
@@ -57,11 +50,11 @@ const AmountCounter = (props) => {
 					/>
 					<button
 						type="submit"
-						className={isAddHiden ? "summary__button hiden" : "summary__button"}
+						className={isAddHiden ? "amount-counter__button hiden" : "amount-counter__button"}
 					>AddButton
 					</button>
 				</div>
-				<label className="summary__label" htmlFor={props.name}>{props.label}</label>
+				<label className="amount-counter__label" htmlFor={props.name}>{props.label}</label>
 			</fieldset>
 		</form>
 	)

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import AmountCounter from "./AmountCounter";
+import './summary.scss';
+import AmountCounter from "../AmountCounter/AmountCounter";
 import salaryIcon from "../../Assets/Salary.svg";
 import pay from "../../Assets/Pay.svg";
 import savings from "../../Assets/Savings.svg";
@@ -12,9 +13,6 @@ const Summary = (props) => {
 			return [...prevState, amountData]
 		})
 	}
-
-	// console.log("Test from Summary " + summaryData.map((data) => data.earning));
-
 
 	return (
 		<header className="summary">
@@ -32,7 +30,7 @@ const Summary = (props) => {
 			/>
 			<AmountCounter
 				icon={savings}
-				label="Zarobki"
+				label="Oszczędnośći"
 				name="savings"
 				onSubmit={handleAmountData}
 			/>

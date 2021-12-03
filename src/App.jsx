@@ -1,6 +1,6 @@
 import React from "react";
-import Desk from "./Desk/Desk";
-import Footer from "./Footer";
+import Desk from "./Components/Desk/Desk";
+import Footer from "./Components/Footer/Footer";
 
 const App = () => {
 	return (

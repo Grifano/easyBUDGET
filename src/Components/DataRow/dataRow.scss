@@ -1,0 +1,26 @@
+@import "../../styles.scss";
+
+.data-row {
+	width: 100%;
+	max-width: 542px;
+	display: inline-flex;
+	align-items: center;
+	line-height: 1;
+	color: $data-row-item--text;
+	&__title {
+		font-size: 25px;
+	}
+	&__ex-date {
+		font-weight: 300;
+		font-size: 20px;
+	}
+	&__item {
+		margin: 0px 5px;
+		&:first-child {
+			margin-left: 0px;
+		}
+		&:last-child {
+			margin-right: 0px;
+		}
+	}
+}

@@ -1,0 +1,8 @@
+@import "../../styles.scss";
+
+.summary {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 80px;
+	margin: 0px 0px 75px 0px;
+}

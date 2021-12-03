@@ -77,4 +77,8 @@ const proudOfThisFunc = () => {
 - LinkedIn - [@Grifano](https://www.linkedin.com/in/serhii-orlenko-44aaa4a3/)
 
 ### Acknowledgments
-Say "thank you" to person that helped to you...
+To Ahmad for his article about styling custom scrool-bar https://ishadeed.com/article/custom-scrollbars-css/
+To David Adeneye for his article where his explain what is a PropTypes https://www.smashingmagazine.com/2020/08/mastering-props-proptypes-react/
+To Rafael Leitão thanks to him, I understood how useRef is works https://dev.to/carlosrafael22/using-refs-in-react-functional-components-part-1-useref-callback-ref-2j5i
+To Shedrack Akintayo for his article about styling React components https://www.smashingmagazine.com/2020/05/styling-components-react/
+To Michał Bednarz for his article about "Absolute import" https://dev.to/mr_frontend/absolute-imports-in-create-react-app-3ge8
