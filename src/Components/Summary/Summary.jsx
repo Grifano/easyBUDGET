@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './summary.scss';
+
 import AmountCounter from "../AmountCounter/AmountCounter";
 import salaryIcon from "../../Assets/Salary.svg";
 import pay from "../../Assets/Pay.svg";

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './progressBar.scss';
+import './progress-bar.scss';
 
 const ProgressBar = ({ zone, progress }) => {
 	const [percentage, setPercentage] = useState(progress)

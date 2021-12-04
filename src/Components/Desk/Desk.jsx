@@ -1,7 +1,8 @@
 import React from "react";
-import Aside from "./Aside";
-import Furnitura from "./Furnitura";
-import Content from "./Content";
+import Aside from "../Aside/Aside";
+import Furnitura from "../Fornitura/Furnitura";
+import Summary from "Components/Summary/Summary";
+import PlanCards from "Components/PlanCards/PlanCards";
 
 const Desk = () => {
 	return (
@@ -13,7 +14,10 @@ const Desk = () => {
 
 			<main className="desk">
 				<Aside />
-				<Content />
+				<section className="desk__content">
+					<Summary />
+					<PlanCards />
+				</section>
 			</main>
 		</>
 	)

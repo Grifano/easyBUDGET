@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import './form-stack.scss';
 import { MainButton } from "../Buttons/Buttons";
-import { TextField } from "../Assets/InputField";
+import { TextField } from "../InputField/InputField";
 
 const FormStack = ({ isFullSize, zone }) => {
 	const [planCards, setPlanCards] = useState([]);

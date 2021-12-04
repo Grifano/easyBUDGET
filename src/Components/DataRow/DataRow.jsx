@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import './dataRow.scss';
+import './data-row.scss';
 import { DeleteButton } from "Components/Buttons/Buttons";
 import Checkbox from "Components/Checkbox/Checkbox";
-import { AmountField } from "Components/Assets/InputField";
+import { AmountField } from "Components/InputField/InputField";
 
 const DataRow = (props) => {
 	const [dataRowData, setDataRowData] = useState({

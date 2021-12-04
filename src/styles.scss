@@ -1,38 +1,19 @@
 // *** ShortKey VSCODE ***
 //! Collaps all css: CMD+K CMD+0;
+// Variables
+@import "./Scss/variables";
 
-// Fonts
-$handwriting: "Shadows Into Light", cursive;
-$logo-end: "Squada One", cursive;
-$font-family: Helvetica, Arial, sans-serif;
-
-// Colors
-$bg-body-color: #e6cca9;
-$bg-element-color--light: #f8f8f8;
-$text-light-color: #ffffff;
-// Brand
-$zone-red: #fd6f96;
-$zone-red--light: rgba(253, 111, 150, 0.7);
-$zone-orange: #f58634;
-$zone-orange--light: rgba(245, 132, 52, 0.7);
-$zone-green: #95dac1;
-$zone-green--light: rgba(149, 218, 193, 0.7);
-//DataRowItem Component
-$data-row-item--border: #512d6d;
-$data-row-item--text: rgba(81, 45, 109, 0.7);
-// Summary Component
-$summary-border: #4b89ac;
-$summary-text: #446491;
+//Reset the standart margin and padding for all
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
-
+// Set a main font-size for easyes calculating rem
 html {
 	font-size: 10px;
 }
-
+// Setup the body
 body {
 	font-family: $font-family;
 	background-color: $bg-body-color;
@@ -48,45 +29,8 @@ body {
 	min-height: 100vh;
 	width: 100%;
 }
-.desk {
-	display: grid;
-	grid-template-columns: 0.5fr 2fr;
-	flex-grow: 1;
-	margin: 40px;
-	margin-bottom: 0;
-	background: rgba(237, 238, 247, 0.15);
-	box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15);
-	backdrop-filter: blur(4px);
-	border-radius: 20px;
-	&.dashboard--furnitura {
-		position: relative;
-		backdrop-filter: none;
-		box-shadow: none;
-		background: transparent;
-	}
-}
-.furnitura {
-	position: absolute;
-	width: 9.576vw;
-	height: 9.576vw;
-	background: rgba(228, 251, 255, 0.1);
-	border-radius: 100%;
-	z-index: -1;
-	bottom: 80px;
-}
-.footer {
-	padding: 2rem;
-	text-align: center;
-	font-size: 1.5rem;
-	color: rgba(255, 255, 255, 0.8);
-	span {
-		color: #c36c12;
-	}
-}
-/* Components */
 
-// Modificator
-// Show-Hide animation for the FormStack and plan-card__content
+// Modificators
 .show {
 	animation-name: show;
 	animation-duration: 0.5s;
@@ -129,214 +73,3 @@ body {
 	z-index: 999;
 	box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
 }
-/* Buttons */
-
-/* /Buttons */
-
-/* InputFields */
-.input-field--text {
-	max-height: 30px;
-	width: 100%;
-	font-size: 1.3rem;
-	line-height: 1;
-	padding: 0.5em 0.7em;
-	color: black;
-	display: inline-block;
-	background: #ffffff;
-	border: 2px solid $zone-red;
-	border-radius: 10px;
-	&::placeholder {
-		color: #c8c8c8;
-	}
-	&:focus {
-		border: 2px solid transparent;
-		box-shadow: 0 0 0 3px $data-row-item--border;
-	}
-}
-.input-field--number {
-	max-height: 30px;
-	width: 110px;
-	font-weight: 700;
-	font-size: 2rem;
-	line-height: 1;
-	padding: 5px 19px 5px 9px;
-	color: #828282;
-	display: inline-block;
-	background: #ffffff;
-	border: 2px solid $data-row-item--border;
-	border-radius: 5px;
-	// Todo: Add curency as an after element to the input field
-	// ? Currently ::after isn't apear on the element
-	// &::after {
-	// 	content: "";
-	// 	background-color: #000;
-	// 	font-size: 0.5rem;
-	// 	display: block;
-	// 	width: 10px;
-	// 	height: 10px;
-	// 	top: 5px;
-	// 	right: 5px;
-	// 	position: absolute;
-	// 	z-index: 10;
-	// }
-	&::placeholder {
-		color: #828282;
-	}
-	&:focus {
-		border: 2px solid transparent;
-		box-shadow: 0 0 0 3px $zone-red;
-	}
-}
-
-/* /InputFields */
-
-/* Aside */
-.aside {
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 6rem 2.5rem;
-	background: linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.3) 100%);
-	border-radius: 20px;
-	backdrop-filter: blur(20px);
-	img {
-		max-width: 100%;
-		height: auto;
-		object-fit: cover;
-	}
-	&__expander {
-		flex-grow: 1;
-	}
-	@media (max-width: 768px) {
-		position: fixed;
-		top: 0;
-		left: 0;
-	}
-}
-/* /Aside */
-
-/* Content */
-.content {
-	padding: 6rem;
-	display: flex;
-	flex-direction: column;
-	&.popup-bg {
-		&::after {
-			content: "";
-			display: block;
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			top: 0;
-			left: 0;
-			background-color: rgba(0, 0, 0, 0.3);
-		}
-	}
-}
-/* /Content */
-
-.form-stack {
-	&__fieldset {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-	&__legend {
-		font-family: $handwriting;
-		font-size: 2.5rem;
-		line-height: 1;
-		letter-spacing: 0.08em;
-		color: #446491;
-		margin: 0px 0px 15px 0px;
-	}
-	&__input {
-		margin: 0px 0px 10px 0px;
-	}
-}
-/* Summary */
-
-/* /Summary */
-
-/* DataRow */
-
-/* /DataRow */
-
-/* plan-card */
-.plan-cards {
-	display: grid;
-	grid-row-gap: 130px;
-	&__item {
-		height: 100px;
-		position: relative;
-		&:nth-child(2) {
-			margin-left: 130px;
-		}
-		&:last-child {
-			height: 160px;
-		}
-	}
-}
-.plan-card {
-	width: 784px;
-	height: 100px;
-	position: relative;
-	background-color: $bg-element-color--light;
-	border-radius: 20px;
-	border: 4px solid $zone-red--light;
-	padding: 50px 5px 50px 30px;
-	transition: all 0.3s ease 0s;
-	&__body {
-		display: grid;
-		grid-template-columns: 0.5fr 2fr;
-		grid-column-gap: 30px;
-	}
-	&__aside {
-		display: flex;
-		flex-direction: column;
-		.form-stack {
-			margin-top: auto;
-		}
-	}
-	&__content {
-		display: flex;
-		flex-direction: column;
-		max-height: 290px;
-		padding: 1rem;
-		//! scroll-bar should be working smothly
-		&::-webkit-scrollbar {
-			width: 16px;
-		}
-
-		&::-webkit-scrollbar-track {
-			background-color: #e8e4eb;
-			border-radius: 100px;
-		}
-
-		&::-webkit-scrollbar-thumb {
-			border-radius: 100px;
-			background-color: #cabfd2;
-		}
-		overflow: auto;
-		direction: ltr;
-		scrollbar-color: #e8e4eb #cabfd2;
-		scrollbar-width: thin;
-		padding: 10px 20px 10px 0px;
-		& > li {
-			margin: 0px 0px 14px 0px;
-			&:last-child {
-				margin: 0;
-			}
-		}
-	}
-}
-.plan-card--red {
-	border-color: $zone-red--light;
-}
-.plan-card--orange {
-	border-color: $zone-orange;
-}
-.plan-card--green {
-	border-color: $zone-green;
-}
-/* /plan-card */

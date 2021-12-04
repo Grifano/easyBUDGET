@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './amountCounter.scss';
+import './amount-counter.scss';
 
 const AmountCounter = (props) => {
 	const [amountData, setAmountData] = useState({
@@ -35,7 +35,7 @@ const AmountCounter = (props) => {
 
 	return (
 
-		<form className="amount-counter__form" onSubmit={handleSubmit}>
+		<form className="amount-counter" onSubmit={handleSubmit}>
 			<fieldset className="amount-counter__fieldset">
 				<div className="amount-counter__input-wrapper">
 					<img src={props.icon} alt="" />

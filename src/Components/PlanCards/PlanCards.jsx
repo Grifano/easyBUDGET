@@ -1,5 +1,7 @@
 import React from "react";
-import PlanCard from "./PlanCard";
+import './plan-cards.scss';
+
+import PlanCard from "../PlanCard/PlanCard";
 
 const PlanCards = () => {
 	return (
