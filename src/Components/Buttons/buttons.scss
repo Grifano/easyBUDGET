@@ -50,7 +50,7 @@
 .expand-button {
 	background: $bg-element-color--light;
 	border-top: 4px solid $bg-element-color--light !important;
-	border: 4px solid $zone-red--light;
+	border: 4px solid #000;
 	font-size: 0;
 	padding: 0.1rem;
 	border-radius: 0 0 20px 20px;
@@ -62,31 +62,21 @@
 	bottom: -39px;
 	right: 30px;
 	text-align: center;
-	img {
-		display: inline-block;
-		max-width: 100%;
-		height: auto;
-		object-fit: cover;
-		transition: all 0.3s ease 0s;
-		border-radius: 50px;
-	}
 	svg {
 		&.expanded {
 			transition: all 0.3s ease 0s;
 			transform: rotate(180deg);
 		}
 	}
-	&:hover {
-		svg {
-			fill: #fd6f96;
-		}
-		// //? Should be tested on PlanCard
-	}
-	&:active {
-		img {
-			transform: translateY(0px);
-		}
-	}
+}
+.expand-button--red {
+	border-color: $zone-red--light;
+}
+.expand-button--orange {
+	border-color: $zone-orange--light;
+}
+.expand-button--green {
+	border-color: $zone-green--light;
 }
 .add-button {
 	background: $zone-red;

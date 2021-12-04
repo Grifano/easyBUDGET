@@ -1,12 +1,15 @@
 import React from "react";
+import './buttons.scss';
+
 import plusIcon from "Assets/Button--add.svg";
 import deleteIcon from "Assets/Delete.svg";
-import './buttons.scss';
 
 // Main Button
 export const MainButton = ({ zone, type }) => {
 	let className = "main-button";
-	className += className + "--" + zone;
+	if (zone) {
+		className += " " + className + "--" + zone;
+	}
 
 	return (
 		<button
@@ -20,12 +23,14 @@ export const MainButton = ({ zone, type }) => {
 
 //Expand Button
 export const ExpandButton = ({ zone, isFullSize, onClick }) => {
-
-
+	let className = "expand-button";
+	if (zone) {
+		className += " " + className + "--" + zone;
+	}
 
 	return (
 		<button
-			className="expand-button"
+			className={className}
 			onClick={onClick}
 		>
 			<svg
