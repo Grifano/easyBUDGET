@@ -1,0 +1,16 @@
+@import "../../styles.scss";
+
+.plan-cards {
+	display: grid;
+	grid-row-gap: 130px;
+	&__item {
+		height: 100px;
+		position: relative;
+		&:nth-child(2) {
+			margin-left: 130px;
+		}
+		&:last-child {
+			height: 160px;
+		}
+	}
+}

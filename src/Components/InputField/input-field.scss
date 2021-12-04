@@ -1,0 +1,55 @@
+@import "../../styles.scss";
+
+.input-field--text {
+	max-height: 30px;
+	width: 100%;
+	font-size: 1.3rem;
+	line-height: 1;
+	padding: 0.5em 0.7em;
+	color: black;
+	display: inline-block;
+	background: #ffffff;
+	border: 2px solid $zone-red;
+	border-radius: 10px;
+	&::placeholder {
+		color: #c8c8c8;
+	}
+	&:focus {
+		border: 2px solid transparent;
+		box-shadow: 0 0 0 3px $data-row-item--border;
+	}
+}
+.input-field--number {
+	max-height: 30px;
+	width: 110px;
+	font-weight: 700;
+	font-size: 2rem;
+	line-height: 1;
+	padding: 5px 19px 5px 9px;
+	color: #828282;
+	display: inline-block;
+	background: #ffffff;
+	border: 2px solid $data-row-item--border;
+	border-radius: 5px;
+	// Todo: Add curency as an after element to the input field
+	// ? Currently ::after isn't apear on the element
+	// &::after {
+	// 	content: "";
+	// 	background-color: #000;
+	// 	font-size: 0.5rem;
+	// 	display: block;
+	// 	width: 10px;
+	// 	height: 10px;
+	// 	top: 5px;
+	// 	right: 5px;
+	// 	position: absolute;
+	// 	z-index: 10;
+	// }
+	&::placeholder {
+		color: #828282;
+	}
+	&:focus {
+		border: 2px solid transparent;
+		box-shadow: 0 0 0 3px $zone-red;
+	}
+}

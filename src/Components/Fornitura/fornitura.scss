@@ -1,0 +1,11 @@
+@import "../../styles.scss";
+
+.furnitura {
+	position: absolute;
+	width: 9.576vw;
+	height: 9.576vw;
+	background: rgba(228, 251, 255, 0.1);
+	border-radius: 100%;
+	z-index: -1;
+	bottom: 80px;
+}
