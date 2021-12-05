@@ -1,12 +1,12 @@
 @import "../../styles.scss";
 
-.input-field--text {
+.input-field__text {
 	max-height: 30px;
 	width: 100%;
 	font-size: 1.3rem;
 	line-height: 1;
 	padding: 0.5em 0.7em;
-	color: black;
+	color: $data-row-item--text;
 	display: inline-block;
 	background: #ffffff;
 	border: 2px solid $zone-red;
@@ -16,10 +16,10 @@
 	}
 	&:focus {
 		border: 2px solid transparent;
-		box-shadow: 0 0 0 3px $data-row-item--border;
+		box-shadow: 0 0 0 3px $data-row-item--text;
 	}
 }
-.input-field--number {
+.input-field__number {
 	max-height: 30px;
 	width: 110px;
 	font-weight: 700;

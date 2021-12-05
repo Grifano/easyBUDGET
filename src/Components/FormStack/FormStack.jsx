@@ -41,6 +41,7 @@ const FormStack = ({ isFullSize, zone }) => {
 				<TextField
 					className="form-stack__input"
 					name="title"
+					type="text"
 					value={planData.title}
 					onChange={handleValue}
 					placeholder="Tytul"
@@ -48,6 +49,7 @@ const FormStack = ({ isFullSize, zone }) => {
 				/>
 				<TextField
 					name="expireDate"
+					type="date"
 					value={planData.expireDate}
 					onChange={handleValue}
 					placeholder="Data koncowa"
@@ -55,6 +57,7 @@ const FormStack = ({ isFullSize, zone }) => {
 				/>
 				<TextField
 					name="plannedEarning"
+					type="number"
 					value={planData.plannedEarning}
 					onChange={handleValue}
 					placeholder="Kwota"

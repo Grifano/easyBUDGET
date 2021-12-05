@@ -2,21 +2,20 @@ import React, { useState } from "react";
 import './input-field.scss';
 
 // Type="text"
-export const TextField = (props) => {
-
-	const placeholderValue = (string) => {
-		return string.charAt(0).toUpperCase() + string.slice(1);
+export const TextField = ({ name, type, value, onChange, placeholder, zone }) => {
+	let className = "input-field__text form-stack__input";
+	if (zone) {
+		className += " form-stack__input" + "--" + zone;
 	}
 
 	return (
 		<input
-			className="input-field--text form-stack__input"
-			type="text"
-			name={props.name}
-			// placeholder={placeholderValue(props.name)}
-			value={props.value}
-			onChange={props.onChange}
-			placeholder={props.placeholder}
+			className={className}
+			type={type}
+			name={name}
+			value={value}
+			onChange={onChange}
+			placeholder={placeholder}
 		/>
 	)
 }
@@ -38,7 +37,7 @@ export const AmountField = (props) => {
 
 	return (
 		<input
-			className="input-field--number"
+			className="input-field__number"
 			type="number"
 			maxLength="5"
 			//Todo: Add a maxLength using this example below

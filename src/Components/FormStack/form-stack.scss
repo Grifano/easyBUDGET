@@ -17,4 +17,13 @@
 	&__input {
 		margin: 0px 0px 10px 0px;
 	}
+	&__input--red {
+		border-color: $zone-red--light;
+	}
+	&__input--orange {
+		border-color: $zone-orange--light;
+	}
+	&__input--green {
+		border-color: $zone-green--light;
+	}
 }
