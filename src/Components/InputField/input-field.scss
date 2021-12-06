@@ -11,12 +11,24 @@
 	background: #ffffff;
 	border: 2px solid $zone-red;
 	border-radius: 10px;
+	position: relative;
 	&::placeholder {
 		color: #c8c8c8;
 	}
 	&:focus {
 		border: 2px solid transparent;
 		box-shadow: 0 0 0 3px $data-row-item--text;
+	}
+	&[type="date"] {
+		&::-webkit-calendar-picker-indicator {
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			top: 2px;
+			right: 8px;
+			cursor: pointer;
+			background-image: url("../../Assets/calendar.svg");
+		}
 	}
 }
 .input-field__number {

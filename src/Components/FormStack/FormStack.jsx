@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import './form-stack.scss';
 import { MainButton } from "../Buttons/Buttons";
 import { TextField } from "../InputField/InputField";
+// import DatePicker from "Components/DatePicker/DatePicker";
 
 const FormStack = ({ isFullSize, zone }) => {
 	const [planCards, setPlanCards] = useState([]);
@@ -47,6 +48,8 @@ const FormStack = ({ isFullSize, zone }) => {
 					placeholder="Tytul"
 					zone={zone}
 				/>
+				{/* <DatePicker /> // ! Issue with z-index i think 🤔 */}
+
 				<TextField
 					name="expireDate"
 					type="date"
