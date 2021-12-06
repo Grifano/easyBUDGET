@@ -1,4 +1,5 @@
 import React from "react";
+import './desk.scss';
 import Aside from "../Aside/Aside";
 import Furnitura from "../Fornitura/Furnitura";
 import Summary from "Components/Summary/Summary";
