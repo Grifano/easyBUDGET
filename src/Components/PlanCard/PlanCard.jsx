@@ -17,12 +17,12 @@ const PlanCard = ({ zone }) => {
 		<div
 			className={className}
 		>
-			<div className="plan-card__body">
+			<ProgressBar
+				progress={65}
+				zone={zone}
+			/>
+			<div className={`plan-card__body ${isFullSize ? "hide" : "show"}`}>
 				<aside className="plan-card__aside">
-					<ProgressBar
-						progress={65}
-						zone={zone}
-					/>
 					<FormStack
 						label="Zaplanuj"
 						isFullSize={isFullSize}
@@ -30,16 +30,8 @@ const PlanCard = ({ zone }) => {
 					/>
 				</aside>
 				<ul
-					className={`plan-card__content ${isFullSize ? "hide" : "show"} `}
+					className={"plan-card__content"}
 				>
-					<li><DataRow /></li>
-					<li><DataRow /></li>
-					<li><DataRow /></li>
-					<li><DataRow /></li>
-					<li><DataRow /></li>
-					<li><DataRow /></li>
-					<li><DataRow /></li>
-					<li><DataRow /></li>
 					<li><DataRow /></li>
 				</ul>
 			</div>
@@ -48,7 +40,7 @@ const PlanCard = ({ zone }) => {
 				isFullSize={isFullSize}
 				zone={zone}
 			/>
-		</div>
+		</div >
 	)
 }
 
