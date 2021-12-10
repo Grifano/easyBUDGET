@@ -4,15 +4,14 @@ import { MainButton } from "../Buttons/Buttons";
 import { TextField } from "../InputField/InputField";
 // import DatePicker from "Components/DatePicker/DatePicker";
 
-const FormStack = ({ isFullSize, zone }) => {
-	const [planCards, setPlanCards] = useState([]);
+const FormStack = ({ zone, onAdd }) => {
+
 	const [planData, setPlanData] = useState({
 		title: "",
 		expireDate: "",
 		plannedEarning: "",
 		isPaid: false
 	});
-
 	const handleValue = (event) => {
 		const { name, value } = event.target;
 
@@ -25,20 +24,16 @@ const FormStack = ({ isFullSize, zone }) => {
 
 	}
 
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		setPlanCards((prevState) => {
-			return [...prevState, planData]
-		});
-	};
-
 	return (
 		<form
-			className={`form-stack ${isFullSize ? "hide" : "show"}`}
-			onSubmit={handleSubmit}
+			className={"form-stack"}
+			onSubmit={(e) => {
+				e.preventDefault();
+				return onAdd(planData)
+			}}
 		>
 			<fieldset className="form-stack__fieldset">
-				<legend className="form-stack__legend">{isFullSize}</legend>
+				<legend className="form-stack__legend"></legend>
 				<TextField
 					className="form-stack__input"
 					name="title"

@@ -4,25 +4,20 @@ import { DeleteButton } from "Components/Buttons/Buttons";
 import Checkbox from "Components/Checkbox/Checkbox";
 import { AmountField } from "Components/InputField/InputField";
 
-const DataRow = (props) => {
-	const [dataRowData, setDataRowData] = useState({
-		id: "",
-		title: "Rent",
-		exDate: "08.11.21",
-		amount: Number,
-		payed: false
-	});
+const DataRow = ({ planCardData }) => {
+
+	// console.log(planCardData.title);
 
 	return (
 		<ul className="data-row">
 			<li className="data-row__item flx--grow">
-				<p className="data-row__title">{dataRowData.title}</p>
+				<p className="data-row__title"></p>
 			</li>
 			<li className="data-row__item">
-				<p className="data-row__ex-date">{dataRowData.exDate}</p>
+				<p className="data-row__ex-date"></p>
 			</li>
 			<li className="data-row__item">
-				<AmountField value={dataRowData.amount} />
+				<AmountField value={"1000"} /> //! Test!
 			</li>
 			<li className="data-row__item">
 				<Checkbox />
