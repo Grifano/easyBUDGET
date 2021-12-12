@@ -33,7 +33,7 @@ body {
 // Modificators
 .show {
 	animation-name: show;
-	animation-duration: 0.9s;
+	animation-duration: 0.8s;
 	opacity: 1;
 	visibility: visible;
 	transform: translateY(0px);
@@ -44,8 +44,8 @@ body {
 			transform: translateY(-20px);
 		}
 		100% {
-			opacity: 1;
 			visibility: visible;
+			opacity: 1;
 			transform: translateY(0px);
 		}
 	}
@@ -61,8 +61,8 @@ body {
 			opacity: 1;
 		}
 		100% {
-			visibility: hidden;
 			opacity: 0;
+			visibility: hidden;
 		}
 	}
 }
@@ -71,7 +71,7 @@ body {
 }
 .fullscreen {
 	// position: absolute !important;
-	height: 390px !important;
+	height: 465px !important;
 	// top: 0;
 	// left: 0;
 	// z-index: 5;

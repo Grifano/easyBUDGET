@@ -5,7 +5,7 @@ import './input-field.scss';
 export const TextField = ({ name, type, value, onChange, placeholder, zone }) => {
 	let className = "input-field__text form-stack__input";
 	if (zone) {
-		className += " form-stack__input" + "--" + zone;
+		className += `${className} form - stack__input--${zone}`;
 	}
 
 	return (
@@ -21,25 +21,71 @@ export const TextField = ({ name, type, value, onChange, placeholder, zone }) =>
 }
 
 // Type="number"
-export const AmountField = (props) => {
+export const AmountField = ({ value }) => {
 
-	const [amount, setAmount] = useState({});
+	const [amount, setAmount] = useState(value);
 
 	const handleAmount = (e) => {
-		const { name, value } = e.target;
+		let { name, value } = e.target;
+		var currency = 'PLN'; // https://www.currency-iso.org/dam/downloads/lists/list_one.xml
+		var options = {
+			maximumFractionDigits: 2,
+			currency: currency,
+			style: "currency",
+			currencyDisplay: "symbol"
+		}
+		if (value || value === 0) {
+			value.localStringToNumber(value).toLocaleString(undefined, options)
+		}
+
+		console.log(value);
+
 		setAmount((prevValue) => {
 			return {
 				...prevValue,
 				[name]: value
 			}
-		})
+		});
+
 	};
+
+
+	// // format inital value
+	// onBlur({ target: currencyInput })
+
+	// // bind event listeners
+	// currencyInput.addEventListener('focus', onFocus)
+	// currencyInput.addEventListener('blur', onBlur)
+
+
+	// function localStringToNumber(s) {
+	// 	return Number(String(s).replace(/[^0-9.-]+/g, ""))
+	// }
+
+	// function onFocus(e) {
+	// 	var value = e.target.value;
+	// 	e.target.value = value ? localStringToNumber(value) : ''
+	// }
+
+	// function onBlur(e) {
+	// 	var value = e.target.value
+
+	// 	var options = {
+	// 		maximumFractionDigits: 2,
+	// 		currency: currency,
+	// 		style: "currency",
+	// 		currencyDisplay: "symbol"
+	// 	}
+
+	// 	e.target.value = (value || value === 0)
+	// 		? localStringToNumber(value).toLocaleString(undefined, options)
+	// 		: ''
+	// }
 
 	return (
 		<input
 			className="input-field__number"
-			type="number"
-			maxLength="5"
+			type="currency"
 			//Todo: Add a maxLength using this example below
 			// class App extends React.Component {
 			// 			state={form: { message: ""
@@ -55,24 +101,10 @@ export const AmountField = (props) => {
 			// 		}
 			// 	});
 			// };
-
-			// render() {
-			// 	return (
-			// 		<input
-			// 			onChange={this.handleChangeInput}
-			// 			value={this.state.form.message}
-			// 			type="text"
-			// 			className="phone validate"
-			// 			name="phone"
-			// 			maxLength="11"
-			// 		/>
-			// 	);
-			// }
-			// }
-			name={props.name}
+			name="plannedEarning"
 			//Todo: value should be editable in a future
-			value={amount.value} // ? Ask on StackOverflow how to add "curency at the end of amount"
-			onChange={props.onChange}
+			value={amount}
+			onChange={handleAmount}
 		/>
 	)
 }

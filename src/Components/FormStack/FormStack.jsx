@@ -6,12 +6,7 @@ import { TextField } from "../InputField/InputField";
 
 const FormStack = ({ zone, onAdd }) => {
 
-	const [planData, setPlanData] = useState({
-		title: "",
-		expireDate: "",
-		plannedEarning: "",
-		isPaid: false
-	});
+	const [planData, setPlanData] = useState({});
 	const handleValue = (event) => {
 		const { name, value } = event.target;
 
@@ -29,6 +24,12 @@ const FormStack = ({ zone, onAdd }) => {
 			className={"form-stack"}
 			onSubmit={(e) => {
 				e.preventDefault();
+				setPlanData({
+					title: "",
+					expireDate: "",
+					plannedEarning: "",
+					isPaid: false
+				})
 				return onAdd(planData)
 			}}
 		>

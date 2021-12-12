@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import './progress-bar.scss';
 
 const ProgressBar = ({ zone, progress }) => {
-	const [percentage, setPercentage] = useState(progress)
+	// const [percentage, setPercentage] = useState(progress)
+	const percentage = 75; // ! Tempory!
 	const sqSize = 150;
 	const strokeWidth = 16;
 	const radius = (sqSize - strokeWidth) / 2;
@@ -11,24 +12,23 @@ const ProgressBar = ({ zone, progress }) => {
 	const dashOffset = dashArray - dashArray * percentage / 100;
 	let className = "progress-bar";
 
-
 	return (
 
 		<svg
-			className={className + " progress-bar--" + zone}
+			className={`${className} progress-bar--${zone}`}
 			width={sqSize}
 			height={sqSize}
 			viewBox={viewBox}
 		>
 			<circle
-				className={className + "__bg" + "--" + zone}
+				className={`${className}__bg--${zone}`}
 				cx={sqSize / 2}
 				cy={sqSize / 2}
 				r={radius}
 				strokeWidth={`${strokeWidth}px`}
 			/>
 			<circle
-				className={className + "__progress " + className + "__progress" + "--" + zone}
+				className={`${className}__progress ${className}__progress--${zone}`}
 				cx={sqSize / 2}
 				cy={sqSize / 2}
 				r={radius}

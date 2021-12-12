@@ -6,7 +6,14 @@ import Summary from "Components/Summary/Summary";
 import PlanCards from "Components/PlanCards/PlanCards";
 
 const Desk = () => {
-	const [planCardData, setPlanCardData] = useState([]);
+	const [planCardData, setPlanCardData] = useState([
+		{
+			title: "",
+			expireDate: String,
+			plannedEarning: Number,
+			isPaid: false
+		}
+	]);
 
 	function addNewPlanData(planData) {
 		console.log("Test is submit?");
@@ -14,8 +21,6 @@ const Desk = () => {
 			return [...prevState, planData]
 		})
 	};
-
-	// console.log(planCardData);
 
 	return (
 		<>
@@ -28,7 +33,7 @@ const Desk = () => {
 				<Aside />
 				<section className="desk__content">
 					<Summary />
-					<PlanCards onAdd={addNewPlanData()} />
+					<PlanCards onAdd={addNewPlanData} planCardData={planCardData} />
 				</section>
 			</main>
 		</>

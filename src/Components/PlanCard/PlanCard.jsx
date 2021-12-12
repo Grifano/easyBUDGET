@@ -8,7 +8,7 @@ import FormStack from "../FormStack/FormStack";
 
 const PlanCard = ({ zone, planData, onAdd, planCardData }) => {
 	const [isFullSize, setFullSize] = useState(true);
-	let className = "plan-card" + " plan-card--" + zone;
+	let className = `plan-card plan-card--${zone}`;
 	if (!isFullSize) {
 		className += " fullscreen"
 	}
@@ -34,7 +34,16 @@ const PlanCard = ({ zone, planData, onAdd, planCardData }) => {
 				<ul
 					className={"plan-card__content"}
 				>
-					<li><DataRow planCardData={planCardData} /></li>
+					{planCardData.map((cardDate, index) => {
+						return <li key={index}>
+							<DataRow
+								title={cardDate.title}
+								date={cardDate.expireDate}
+								earning={cardDate.plannedEarning}
+								checkbox={cardDate.isPaid}
+							/>
+						</li>
+					})}
 				</ul>
 			</div>
 			<ExpandButton

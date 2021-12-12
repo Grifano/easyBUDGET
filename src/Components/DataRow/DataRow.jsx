@@ -1,26 +1,27 @@
-import React, { useState } from "react";
+import React from "react";
 import './data-row.scss';
 import { DeleteButton } from "Components/Buttons/Buttons";
 import Checkbox from "Components/Checkbox/Checkbox";
 import { AmountField } from "Components/InputField/InputField";
 
-const DataRow = ({ planCardData }) => {
-
-	// console.log(planCardData.title);
+const DataRow = ({ title, date, earning, checkbox }) => {
 
 	return (
 		<ul className="data-row">
 			<li className="data-row__item flx--grow">
-				<p className="data-row__title"></p>
+				<p className="data-row__title">{title.charAt(0).toUpperCase() + title.slice(1)}</p>
 			</li>
 			<li className="data-row__item">
-				<p className="data-row__ex-date"></p>
+				<p className="data-row__ex-date">{date}</p>
 			</li>
 			<li className="data-row__item">
-				<AmountField value={"1000"} /> //! Test!
+				<AmountField
+					name={"plannedEarning"}
+					value={earning}
+				/>
 			</li>
 			<li className="data-row__item">
-				<Checkbox />
+				<Checkbox value={checkbox} />
 			</li>
 			<li className="data-row__item">
 				<DeleteButton />

@@ -4,6 +4,7 @@ import './plan-cards.scss';
 import PlanCard from "../PlanCard/PlanCard";
 
 const PlanCards = ({ onSubmit, planCardData, onAdd }) => {
+
 	return (
 		<section className="plan-cards">
 			<div className="plan-cards__item">

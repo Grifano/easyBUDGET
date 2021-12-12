@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import './checkbox.scss';
 
-const Checkbox = () => {
+const Checkbox = ({ value }) => {
+	let defaultChecked = true;
+	const [isChecked, setCheck] = useState(!defaultChecked)
+
+	const handleChacked = (e) => {
+		console.log("Test");
+		console.log(isChecked);
+		e.preventDefault();
+		setCheck(!isChecked)
+	}
 
 	return (
 		<label>
@@ -9,6 +18,8 @@ const Checkbox = () => {
 				className="checkbox"
 				type="checkbox"
 				name="done"
+				value={isChecked}
+				onClick={handleChacked}
 			/>
 		</label>
 	)
