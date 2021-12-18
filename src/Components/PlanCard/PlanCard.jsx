@@ -6,7 +6,7 @@ import ProgressBar from "../ProgressBar/ProgressBar";
 import DataRow from "../DataRow/DataRow";
 import FormStack from "../FormStack/FormStack";
 
-const PlanCard = ({ zone, planData, onAdd, planCardData }) => {
+const PlanCard = ({ zone, planData, onAdd, onDelete, planCardData }) => {
 	const [isFullSize, setFullSize] = useState(true);
 	let className = `plan-card plan-card--${zone}`;
 	if (!isFullSize) {
@@ -29,22 +29,15 @@ const PlanCard = ({ zone, planData, onAdd, planCardData }) => {
 						zone={zone}
 						planData={planData}
 						onAdd={onAdd}
+						onDelete={onDelete}
 					/>
 				</aside>
-				<ul
-					className={"plan-card__content"}
-				>
-					{planCardData.map((cardDate, index) => {
-						return <li key={index}>
-							<DataRow
-								title={cardDate.title}
-								date={cardDate.expireDate}
-								earning={cardDate.plannedEarning}
-								checkbox={cardDate.isPaid}
-							/>
-						</li>
-					})}
-				</ul>
+				<div className={"plan-card__content"}>
+					<DataRow
+						planCardData={planCardData}
+						onDelete={onDelete}
+					/>
+				</div>
 			</div>
 			<ExpandButton
 				onClick={() => setFullSize(!isFullSize)}

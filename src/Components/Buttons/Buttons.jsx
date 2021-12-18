@@ -65,12 +65,12 @@ export const AddButton = () => {
 }
 
 // Delete Button
-export const DeleteButton = (props) => {
+export const DeleteButton = ({ onDelete }) => {
 
 	return (
 		<button
 			className="delete-button"
-			onClick={props.onClick}
+			onClick={onDelete}
 		>
 			<img src={deleteIcon} alt="" />
 			AddButton

@@ -6,17 +6,25 @@ import Summary from "Components/Summary/Summary";
 import PlanCards from "Components/PlanCards/PlanCards";
 
 const Desk = () => {
+
 	const [planCardData, setPlanCardData] = useState([
 		{
-			title: "",
+			title: "Test",
 			expireDate: String,
 			plannedEarning: Number,
-			isPaid: false
+			isPaid: Boolean
 		}
 	]);
 
+	function deleteRowData(id) {
+		setPlanCardData((prevState) => {
+			return prevState.filter((item, index) => {
+				return index !== id
+			})
+		})
+	}
+
 	function addNewPlanData(planData) {
-		console.log("Test is submit?");
 		setPlanCardData((prevState) => {
 			return [...prevState, planData]
 		})
@@ -33,7 +41,11 @@ const Desk = () => {
 				<Aside />
 				<section className="desk__content">
 					<Summary />
-					<PlanCards onAdd={addNewPlanData} planCardData={planCardData} />
+					<PlanCards
+						onAdd={addNewPlanData}
+						onDelete={deleteRowData}
+						planCardData={planCardData}
+					/>
 				</section>
 			</main>
 		</>

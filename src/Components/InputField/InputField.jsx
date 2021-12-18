@@ -20,6 +20,10 @@ export const TextField = ({ name, type, value, onChange, placeholder, zone }) =>
 	)
 }
 
+TextField.defaultProps = {
+	value: ""
+}
+
 // Type="number"
 export const AmountField = ({ value }) => {
 
