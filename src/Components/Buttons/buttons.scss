@@ -86,6 +86,15 @@
 .expand-button--green {
 	border-color: $zone-green--light;
 }
+.expand-button--purple {
+	border-color: #7868e6;
+	right: -49px !important;
+	top: 10vh !important;
+	transform: rotate(-90deg);
+	@media (min-width: 991px) {
+		display: none;
+	}
+}
 .add-button {
 	background: $zone-red;
 	border: 2px solid $zone-red;

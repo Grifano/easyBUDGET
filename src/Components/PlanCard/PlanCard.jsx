@@ -7,9 +7,9 @@ import DataRow from "../DataRow/DataRow";
 import FormStack from "../FormStack/FormStack";
 
 const PlanCard = ({ zone, planData, onAdd, onDelete, planCardData }) => {
-	const [isFullSize, setFullSize] = useState(true);
+	const [isFullSize, setFullSize] = useState(false);
 	let className = `plan-card plan-card--${zone}`;
-	if (!isFullSize) {
+	if (isFullSize) {
 		className += " fullscreen"
 	}
 
@@ -21,7 +21,7 @@ const PlanCard = ({ zone, planData, onAdd, onDelete, planCardData }) => {
 				progress={65}
 				zone={zone}
 			/>
-			<div className={`plan-card__body ${isFullSize ? "hide" : "show"}`}>
+			<div className={`plan-card__body ${isFullSize ? "show" : "hide"}`}>
 				<aside className="plan-card__aside">
 					<FormStack
 						label="Zaplanuj"

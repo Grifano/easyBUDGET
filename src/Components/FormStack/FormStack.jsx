@@ -7,6 +7,7 @@ import { TextField } from "../InputField/InputField";
 const FormStack = ({ zone, onAdd }) => {
 
 	const [planData, setPlanData] = useState({});
+
 	const handleValue = (event) => {
 		const { name, value } = event.target;
 

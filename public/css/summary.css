@@ -111,3 +111,12 @@ body {
   -webkit-box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
 }
+
+.summary {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 80px;
+  margin: 0px 0px 75px 0px;
+}

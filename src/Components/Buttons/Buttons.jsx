@@ -22,7 +22,7 @@ export const MainButton = ({ zone, type }) => {
 }
 
 //Expand Button
-export const ExpandButton = ({ zone, isFullSize, onClick }) => {
+export const ExpandButton = ({ zone, isFullSize, onClick, right, bottom, style }) => {
 	let className = "expand-button";
 	if (zone) {
 		className += " " + className + "--" + zone;
@@ -34,7 +34,7 @@ export const ExpandButton = ({ zone, isFullSize, onClick }) => {
 			onClick={onClick}
 		>
 			<svg
-				className={isFullSize ? null : "expanded"}
+				className={isFullSize ? 'expanded' : ''}
 				width="40"
 				height="21"
 				viewBox="0 0 40 21"

@@ -13,8 +13,7 @@ const PlanCards = ({ onSubmit, planCardData, onAdd, onDelete }) => {
 					planCardData={planCardData}
 					onSubmit={onSubmit}
 					onAdd={onAdd}
-					onDelete={onDelete}
-				/>
+					onDelete={onDelete}/>
 			</div>
 			<div className="plan-cards__item">
 				<PlanCard

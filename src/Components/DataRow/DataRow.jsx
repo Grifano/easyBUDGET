@@ -8,25 +8,25 @@ const DataRow = ({ planCardData, onDelete }) => {
 
 	return (
 		<div >
-			{planCardData.map((data, index) => (
-				<ul className="data-row" key={index}>
+			{planCardData.map((item) => (
+				<ul className="data-row" key={item.id}>
 					<li className="data-row__item flx--grow">
-						<p className="data-row__title">{data.title.charAt(0).toUpperCase() + data.title.slice(1)}</p>
+						<p className="data-row__title">{item.title.charAt(0).toUpperCase() + item.title.slice(1)}</p>
 					</li>
 					<li className="data-row__item">
-						<p className="data-row__ex-date">{data.date}</p>
+						<p className="data-row__ex-date">{item.date}</p>
 					</li>
 					<li className="data-row__item">
 						<AmountField
 							name={"plannedEarning"}
-							value={data.plannedEarning}
+							value={item.plannedEarning}
 						/>
 					</li>
 					<li className="data-row__item">
-						<Checkbox paid={data.isPaid} onChecked={onDelete} />
+						<Checkbox paid={item.isPaid} onChecked={onDelete} />
 					</li>
 					<li className="data-row__item">
-						<DeleteButton onDelete={() => onDelete(index)} />
+						<DeleteButton onDelete={() => onDelete(item.id)} />
 					</li>
 				</ul>
 			))}
