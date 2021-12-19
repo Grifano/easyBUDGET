@@ -16,7 +16,7 @@ const Summary = (props) => {
 	// }
 
 	return (
-		<header className="summary">
+		<div className="summary">
 			<AmountCounter
 				icon={salaryIcon}
 				label="Zarobki"
@@ -35,7 +35,7 @@ const Summary = (props) => {
 				name="savings"
 			// onSubmit={handleAmountData}
 			/>
-		</header>
+		</div>
 	)
 
 

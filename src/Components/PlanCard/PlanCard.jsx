@@ -6,7 +6,7 @@ import ProgressBar from "../ProgressBar/ProgressBar";
 import DataRow from "../DataRow/DataRow";
 import FormStack from "../FormStack/FormStack";
 
-const PlanCard = ({ zone, planData, onAdd, onDelete, planCardData }) => {
+const PlanCard = ({ zone, planData, onAdd, onDelete, planCardData, isOpen }) => {
 	const [isFullSize, setFullSize] = useState(false);
 	let className = `plan-card plan-card--${zone}`;
 	if (isFullSize) {

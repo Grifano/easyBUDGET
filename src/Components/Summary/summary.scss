@@ -2,7 +2,10 @@
 
 .summary {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 80px;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 	margin: 0px 0px 75px 0px;
+	@media (max-width: 991px) {
+		row-gap: 30px;
+		margin: 0;
+	}
 }

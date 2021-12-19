@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import './desk.scss';
-// import Aside from "../Aside/Aside";
 // import Furnitura from "../Fornitura/Furnitura";
 import Summary from "Components/Summary/Summary";
+import Footer from "Components/Footer/Footer";
 import PlanCards from "Components/PlanCards/PlanCards";
 
-const Desk = () => {
+const Desk = ({ isMobile }) => {
+	const [isOpen, setOpen] = useState(false)
 	const [planCardData, setPlanCardData] = useState([
 		{
 			id: 1,
@@ -52,15 +53,16 @@ const Desk = () => {
 			<Furnitura position_2={"left"} /> */}
 
 			<main className="desk">
-				{/* <Aside /> */}
 				<section className="desk__content">
-					<Summary />
+					{!isMobile ? <Summary /> : null}
 					<PlanCards
 						onAdd={addNewPlanData}
 						onDelete={deleteRowData}
 						planCardData={planCardData}
+						isOpen={isOpen}
 					/>
 				</section>
+				<Footer />
 			</main>
 		</>
 	)

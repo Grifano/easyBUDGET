@@ -1,19 +1,23 @@
 @import "../../styles.scss";
 
 .plan-card {
-	width: 784px;
+	max-width: 784px;
 	height: 100px;
 	background-color: $bg-element-color--light;
 	border-radius: 20px;
 	border: 4px solid $zone-red--light;
 	padding: 50px 5px 50px 30px;
-	transition: all 0.3s ease 0s;
+	transition: all 0.2s ease-in-out 0s;
 	position: relative;
 	&__body {
 		height: 100%;
 		display: grid;
 		grid-template-columns: 0.5fr 2fr;
 		grid-column-gap: 30px;
+		@media (max-width: 475px) {
+			display: flex;
+			flex-direction: column-reverse;
+		}
 	}
 	&__aside {
 		display: flex;
@@ -52,6 +56,12 @@
 				margin: 0;
 			}
 		}
+		@media (max-width: 475px) {
+			max-height: 215px;
+		}
+	}
+	@media (max-width: 475px) {
+		padding: 20px 15px 20px 15px;
 	}
 }
 .plan-card--red {

@@ -37,22 +37,24 @@ const AmountCounter = (props) => {
 
 		<form className="amount-counter" onSubmit={handleSubmit}>
 			<fieldset className="amount-counter__fieldset">
-				<div className="amount-counter__input-wrapper">
-					<img src={props.icon} alt="" />
-					<input
-						className={isAddHiden ? "amount-counter__input hiden" : "amount-counter__input"}
-						name={props.name}
-						type="number"
-						step="0.01"
-						onChange={handleChanges}
-						onClick={showAddButton}
-						value={amountData.earning}
-					/>
-					<button
-						type="submit"
-						className={isAddHiden ? "amount-counter__button hiden" : "amount-counter__button"}
-					>AddButton
-					</button>
+				<div className="amount-counter__fieldset-top">
+					<img src={props.icon} alt="decor" />
+					<div className="amount-counter__input-wrapper">
+						<input
+							className={isAddHiden ? "amount-counter__input hiden" : "amount-counter__input"}
+							name={props.name}
+							type="number"
+							step="0.01"
+							onChange={handleChanges}
+							onClick={showAddButton}
+							value={amountData.earning}
+						/>
+						<button
+							type="submit"
+							className={isAddHiden ? "amount-counter__button hiden" : "amount-counter__button"}
+						>AddButton
+						</button>
+					</div>
 				</div>
 				<label className="amount-counter__label" htmlFor={props.name}>{props.label}</label>
 			</fieldset>

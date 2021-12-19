@@ -1,15 +1,10 @@
 @import "../../styles.scss";
 
 .desk {
-	display: grid;
-	grid-template-columns: 0.5fr 2fr;
+	display: flex;
+	flex-direction: column;
 	flex-grow: 1;
-	margin: 40px;
 	margin-bottom: 0;
-	background: rgba(237, 238, 247, 0.15);
-	box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15);
-	backdrop-filter: blur(4px);
-	border-radius: 20px;
 	&.dashboard--furnitura {
 		position: relative;
 		backdrop-filter: none;
@@ -17,7 +12,8 @@
 		background: transparent;
 	}
 	&__content {
-		padding: 6rem;
+		flex-grow: 1;
+		padding: 60px 6vw;
 		display: flex;
 		flex-direction: column;
 		&.popup-bg {

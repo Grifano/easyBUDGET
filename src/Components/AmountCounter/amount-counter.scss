@@ -1,7 +1,6 @@
 @import "../../styles.scss";
 
 .amount-counter {
-	max-width: 952px;
 	margin: 0 auto;
 	line-height: 1;
 	letter-spacing: 0.08em;
@@ -11,6 +10,21 @@
 		flex-direction: column;
 		align-items: center;
 	}
+	&__fieldset-top {
+		display: flex;
+		img {
+			width: 47px;
+		}
+		@media (max-width: 991px) {
+			align-items: center;
+			flex-direction: column;
+			img {
+				width: 27px;
+				margin-bottom: 10px;
+			}
+		}
+	}
+
 	&__label {
 		width: 100%;
 		font-family: $handwriting;
@@ -19,6 +33,12 @@
 		padding: 12px 0px 0px 0px;
 		margin: 12px 0px 0px 0px;
 		text-align: center;
+		@media (max-width: 1124px) {
+			border-top: 2px solid $summary-text;
+			font-size: 2rem;
+			padding: 6px 0px 0px 0px;
+			margin: 6px 0px 0px 0px;
+		}
 	}
 	&__input-wrapper {
 		display: flex;
@@ -37,9 +57,18 @@
 		padding: 0.26em 1em;
 		color: $summary-text;
 		transition: all 0.3s ease 0s;
+		position: relative;
 		&.hiden {
 			background: transparent;
 			border: 4px solid transparent;
+			@media (max-width: 991px) {
+				border: 2px solid transparent;
+			}
+		}
+		@media (max-width: 1124px) {
+			max-width: 140px;
+			font-size: 2rem;
+			border: 2px solid $summary-border;
 		}
 	}
 	&__button {
@@ -56,14 +85,23 @@
 		background-size: cover;
 		cursor: pointer;
 		transition: all 0.3s ease 0s;
-		&:hover {
-			transform: translateY(-2px);
-			box-shadow: 0px 4px 5px $summary-border;
+		@media (max-width: 1124px) {
+			width: 20px;
+			height: 20px;
+			margin: -10px 0px 0px 0px;
+			right: 20px;
 		}
-		&:active {
-			transform: translateY(0px);
-			box-shadow: none;
+		@media (min-width: 991px) {
+			&:hover {
+				transform: translateY(-2px);
+				box-shadow: 0px 4px 5px $summary-border;
+			}
+			&:active {
+				transform: translateY(0px);
+				box-shadow: none;
+			}
 		}
+
 		&.hiden {
 			overflow: hidden;
 			opacity: 0;
