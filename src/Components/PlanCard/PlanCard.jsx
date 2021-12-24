@@ -13,6 +13,11 @@ const PlanCard = ({ zone, planData, onAdd, onDelete, planCardData, isOpen }) => 
 		className += " fullscreen"
 	}
 
+	function onClick() {
+		setFullSize(!isFullSize);
+		isOpen();
+	}
+
 	return (
 		<div
 			className={className}
@@ -40,7 +45,7 @@ const PlanCard = ({ zone, planData, onAdd, onDelete, planCardData, isOpen }) => 
 				</div>
 			</div>
 			<ExpandButton
-				onClick={() => setFullSize(!isFullSize)}
+				onClick={onClick}
 				isFullSize={isFullSize}
 				zone={zone}
 			/>

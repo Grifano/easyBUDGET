@@ -23,6 +23,7 @@ const PlanCards = ({ onSubmit, planCardData, onAdd, onDelete, isOpen }) => {
 					onSubmit={onSubmit}
 					onAdd={onAdd}
 					onDelete={onDelete}
+					isOpen={isOpen}
 				/>
 			</div>
 			<div className="plan-cards__item">
@@ -32,6 +33,7 @@ const PlanCards = ({ onSubmit, planCardData, onAdd, onDelete, isOpen }) => {
 					onSubmit={onSubmit}
 					onAdd={onAdd}
 					onDelete={onDelete}
+					isOpen={isOpen}
 				/>
 			</div>
 		</section>
