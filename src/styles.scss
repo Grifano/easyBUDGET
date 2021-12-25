@@ -74,13 +74,11 @@ body {
 	flex-grow: 1;
 }
 .fullscreen {
-	transform: translate3d(-50%, -50%, -150px);
-	-webkit-transform: translate3d(-50%, -50%, -150px);
 	position: absolute !important;
-	height: 100% !important;
+	height: 90% !important;
 	width: 100% !important;
-	top: 50%;
-	left: 50%;
+	top: 5%;
+	left: 0;
 	z-index: 998;
 	box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
 }
