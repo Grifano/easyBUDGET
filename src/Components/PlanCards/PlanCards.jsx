@@ -1,8 +1,12 @@
 import React from "react";
+
+// Styles
 import './plan-cards.scss';
 
+// Embeded components
 import PlanCard from "../PlanCard/PlanCard";
 
+// Component body
 const PlanCards = ({ onSubmit, planCardData, onAdd, onDelete, isOpen }) => {
 
 	return (

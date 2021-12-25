@@ -2,7 +2,7 @@
 
 .main-button {
 	max-height: 30px;
-	display: flex;
+	display: inline-flex;
 	justify-content: center;
 	align-items: center;
 	width: 100%;
@@ -27,7 +27,7 @@
 }
 .main-button--red {
 	background: $zone-red--light;
-	border-color: $zone-red;
+	border-color: $zone-red !important;
 	&:hover {
 		box-shadow: 0px 3px 10px $zone-red;
 	}
@@ -37,7 +37,7 @@
 }
 .main-button--orange {
 	background: $zone-orange--light;
-	border-color: $zone-orange;
+	border-color: $zone-orange !important;
 	&:hover {
 		box-shadow: 0px 3px 10px $zone-orange;
 	}
@@ -47,7 +47,7 @@
 }
 .main-button--green {
 	background: $zone-green--light;
-	border-color: $zone-green;
+	border-color: $zone-green !important;
 	&:hover {
 		box-shadow: 0px 3px 10px $zone-green;
 	}
@@ -96,25 +96,19 @@
 	}
 }
 .add-button {
-	background: $zone-red;
-	border: 2px solid $zone-red;
+	@extend .main-button;
 	width: 30px;
-	height: 30px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 0;
-	border-radius: 50%;
-	transition: all 0.3s ease 0s;
-	cursor: pointer;
-	&:hover {
-		box-shadow: 0px 3px 10px rgba(253, 111, 149, 0.6);
-		transform: translateY(-2px);
-	}
-	&:active {
-		box-shadow: none;
-		transform: translateY(0px);
-	}
+	font-size: 2rem;
+	padding: 0.3em 0.5em 0.4em 0.5em;
+}
+.add-button--red {
+	@extend .main-button--red;
+}
+.add-button--orange {
+	@extend .main-button--orange;
+}
+.add-button--green {
+	@extend .main-button--green;
 }
 .delete-button {
 	display: flex;

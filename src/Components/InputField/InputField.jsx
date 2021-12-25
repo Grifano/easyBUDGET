@@ -5,7 +5,7 @@ import './input-field.scss';
 export const TextField = ({ name, type, value, onChange, placeholder, zone }) => {
 	let className = "input-field__text form-stack__input";
 	if (zone) {
-		className += `${className} form - stack__input--${zone}`;
+		className += `${className} form-stack__input--${zone}`;
 	}
 
 	return (
@@ -109,6 +109,21 @@ export const AmountField = ({ value }) => {
 			//Todo: value should be editable in a future
 			value={amount}
 			onChange={handleAmount}
+		/>
+	)
+}
+// Type="date"
+export const DateField = ({ value }) => {
+
+	return (
+		<input
+			className="input-field__date"
+			type="text"
+			name="expireDate"
+			asp-for="date"
+			asp-format="{0:yyyy-MM-dd}"
+			value={value}
+			onChange={() => { }}
 		/>
 	)
 }

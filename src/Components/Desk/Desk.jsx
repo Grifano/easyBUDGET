@@ -17,56 +17,56 @@ const Desk = ({ isMobile }) => {
 		{
 			id: 1,
 			title: "This is a most long title ogf the whole project. And if you whant more?",
-			expireDate: "01.01.2021",
+			expireDate: "2020.05.10",
 			plannedEarning: 100,
 			isPaid: false
 		},
 		{
 			id: 2,
 			title: "Test 2",
-			expireDate: "02.01.2021",
+			expireDate: "2021.03.20",
 			plannedEarning: 200,
 			isPaid: false
 		},
 		{
 			id: 3,
 			title: "Test 3",
-			expireDate: "03.01.2021",
+			expireDate: "2021.03.20",
 			plannedEarning: 300,
 			isPaid: false
 		},
 		{
 			id: 4,
 			title: "Test 3",
-			expireDate: "03.01.2021",
+			expireDate: "2021.03.20",
 			plannedEarning: 300,
 			isPaid: false
 		},
 		{
 			id: 5,
 			title: "Test 3",
-			expireDate: "03.01.2021",
+			expireDate: "2021.03.20",
 			plannedEarning: 300,
 			isPaid: false
 		},
 		{
 			id: 6,
 			title: "Test 3",
-			expireDate: "03.01.2021",
+			expireDate: "2021.03.20",
 			plannedEarning: 300,
 			isPaid: false
 		},
 		{
 			id: 7,
 			title: "Test 3",
-			expireDate: "03.01.2021",
+			expireDate: "2021.03.20",
 			plannedEarning: 300,
 			isPaid: false
 		},
 		{
 			id: 8,
 			title: "Test 3",
-			expireDate: "03.01.2021",
+			expireDate: "2021.03.20",
 			plannedEarning: 300,
 			isPaid: false
 		}

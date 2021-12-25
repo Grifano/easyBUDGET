@@ -3,6 +3,7 @@ import './data-row.scss';
 import { DeleteButton } from "Components/Buttons/Buttons";
 import Checkbox from "Components/Checkbox/Checkbox";
 import { AmountField } from "Components/InputField/InputField";
+import { DateField } from "Components/InputField/InputField";
 
 const DataRow = ({ planCardData, onDelete }) => {
 
@@ -11,14 +12,16 @@ const DataRow = ({ planCardData, onDelete }) => {
 			{planCardData.map((item) => (
 				<ul className="data-row" key={item.id}>
 					<li className="data-row__item flx--grow">
-						<p className="data-row__title">{item.title.charAt(0).toUpperCase() + item.title.slice(1)}</p>
+						{/* <p className="data-row__title">{item.title.charAt(0).toUpperCase() + item.title.slice(1)}</p> */}
+						<p className="data-row__title">{item.title}</p>
 					</li>
 					<li className="data-row__item">
 						<ul className="data-row__data">
 							<li>
 								<ul className="data-row__data--left">
 									<li>
-										<p className="data-row__ex-date">{item.expireDate}</p>
+										<DateField value={item.expireDate} />
+										{/* <p className="data-row__ex-date">{item.expireDate}</p> */}
 									</li>
 									<li>
 										<AmountField

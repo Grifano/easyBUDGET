@@ -33,9 +33,10 @@
 }
 .input-field__number {
 	max-height: 30px;
-	width: 110px;
+	width: 100px;
+	text-align: right;
 	font-weight: 700;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	line-height: 1;
 	padding: 5px 19px 5px 9px;
 	color: #828282;
@@ -44,6 +45,11 @@
 	border: 2px solid $data-row-item--border;
 	border-radius: 5px;
 	position: relative;
+	@media (max-width: 425px) {
+		width: 90px;
+		font-size: 1.3rem;
+		padding: 5px 9px 5px 9px;
+	}
 	// Todo: Add curency as an after element to the input field
 	// ? Currently ::after isn't apear on the element
 	&::after {
@@ -57,6 +63,32 @@
 		right: 5px;
 		position: absolute;
 		z-index: 10;
+	}
+	&::placeholder {
+		color: #828282;
+	}
+	&:focus {
+		border: 2px solid transparent;
+		box-shadow: 0 0 0 3px $zone-red;
+	}
+}
+.input-field__date {
+	max-height: 30px;
+	width: 100px;
+	font-weight: 700;
+	font-size: 1.5rem;
+	line-height: 1;
+	padding: 5px 9px 5px 9px;
+	color: #828282;
+	display: inline-block;
+	background: #ffffff;
+	border: 2px solid $data-row-item--border;
+	border-radius: 5px;
+	position: relative;
+	@media (max-width: 425px) {
+		width: 90px;
+		font-size: 1.3rem;
+		padding: 5px 9px 5px 9px;
 	}
 	&::placeholder {
 		color: #828282;

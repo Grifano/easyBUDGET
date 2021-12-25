@@ -21,7 +21,7 @@
 			justify-content: space-between;
 		}
 		@media (max-width: 475px) {
-			padding-top: 100px;
+			padding-top: 110px;
 			flex-direction: column-reverse;
 			align-items: stretch;
 		}
@@ -40,9 +40,12 @@
 		}
 	}
 	&__content {
+		border-radius: 10px;
 		display: flex;
 		flex-direction: column;
-		padding: 1rem;
+		-webkit-box-shadow: inset 0px 0px 8px -3px rgba(66, 68, 90, 1);
+		-moz-box-shadow: inset 0px 0px 8px -3px rgba(66, 68, 90, 1);
+		box-shadow: inset 0px 0px 8px -3px rgba(66, 68, 90, 1);
 		//! scroll-bar should be working smothly
 		&::-webkit-scrollbar {
 			width: 16px;
@@ -61,7 +64,7 @@
 		direction: ltr;
 		scrollbar-color: #e8e4eb #cabfd2;
 		scrollbar-width: thin;
-		padding: 10px 20px 10px 0px;
+		padding: 20px 20px 20px 20px;
 		& > li {
 			margin: 0px 0px 14px 0px;
 			&:last-child {
@@ -70,7 +73,11 @@
 		}
 		@media (max-width: 768px) {
 			margin-top: auto;
-			padding: 10px 5px 0px 0px;
+			padding: 20px 10px 0px 20px;
+		}
+		@media (max-width: 425px) {
+			margin-top: auto;
+			padding: 10px 15px 0px 10px;
 		}
 	}
 	@media (max-width: 768px) {

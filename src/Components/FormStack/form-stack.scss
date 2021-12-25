@@ -1,6 +1,8 @@
 @import "../../styles.scss";
 
 .form-stack {
+	padding: 20px 0px 0px 0px;
+	text-align: center;
 	&__fieldset {
 		display: flex;
 		flex-direction: column;
@@ -10,9 +12,28 @@
 		font-family: $handwriting;
 		font-size: 2.5rem;
 		line-height: 1;
+		text-align: center;
 		letter-spacing: 0.08em;
 		color: #446491;
 		margin: 0px 0px 15px 0px;
+	}
+	&__body {
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+		@media (max-width: 768px) {
+			visibility: hidden;
+			height: 0;
+			opacity: 0;
+		}
+	}
+	&__body--open {
+		@media (max-width: 768px) {
+			visibility: visible;
+			height: auto;
+			opacity: 1;
+		}
 	}
 	&__input {
 		margin: 0px 0px 10px 0px;

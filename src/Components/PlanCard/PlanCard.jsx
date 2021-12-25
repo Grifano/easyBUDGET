@@ -13,8 +13,6 @@ const PlanCard = ({ zone, planData, onAdd, onDelete, planCardData, isOpen }) => 
 		className += " fullscreen"
 	}
 
-	console.log(planCardData[0].expireDate);
-
 	function onClick() {
 		setFullSize(!isFullSize);
 		isOpen();
