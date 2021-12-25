@@ -75,6 +75,7 @@ body {
 }
 .fullscreen {
 	transform: translate3d(-50%, -50%, -150px);
+	-webkit-transform: translate3d(-50%, -50%, -150px);
 	position: absolute !important;
 	height: 100% !important;
 	width: 100% !important;

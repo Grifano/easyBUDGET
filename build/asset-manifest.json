@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.67fb8347.chunk.css",
+    "main.js": "/static/js/main.dab15ce8.chunk.js",
+    "main.js.map": "/static/js/main.dab15ce8.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.985fe3df.js",
+    "runtime-main.js.map": "/static/js/runtime-main.985fe3df.js.map",
+    "static/js/2.01bbd498.chunk.js": "/static/js/2.01bbd498.chunk.js",
+    "static/js/2.01bbd498.chunk.js.map": "/static/js/2.01bbd498.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.67fb8347.chunk.css.map": "/static/css/main.67fb8347.chunk.css.map",
+    "static/js/2.01bbd498.chunk.js.LICENSE.txt": "/static/js/2.01bbd498.chunk.js.LICENSE.txt",
+    "static/media/amount-counter.scss": "/static/media/Button--add.114291c9.svg",
+    "static/media/checkbox.scss": "/static/media/Checked.780c6658.svg",
+    "static/media/Delete.1fca71b1.svg": "/static/media/Delete.1fca71b1.svg",
+    "static/media/Pay.cd99db88.svg": "/static/media/Pay.cd99db88.svg",
+    "static/media/Salary.7891a954.svg": "/static/media/Salary.7891a954.svg",
+    "static/media/Savings.19830d9b.svg": "/static/media/Savings.19830d9b.svg",
+    "static/media/input-field.scss": "/static/media/calendar.206a9586.svg",
+    "static/media/logo.919256b0.svg": "/static/media/logo.919256b0.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.985fe3df.js",
+    "static/js/2.01bbd498.chunk.js",
+    "static/css/main.67fb8347.chunk.css",
+    "static/js/main.dab15ce8.chunk.js"
+  ]
+}

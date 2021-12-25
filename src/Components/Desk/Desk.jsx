@@ -16,7 +16,7 @@ const Desk = ({ isMobile }) => {
 	const [planCardData, setPlanCardData] = useState([
 		{
 			id: 1,
-			title: "Test",
+			title: "This is a most long title ogf the whole project. And if you whant more?",
 			expireDate: "01.01.2021",
 			plannedEarning: 100,
 			isPaid: false
@@ -30,6 +30,41 @@ const Desk = ({ isMobile }) => {
 		},
 		{
 			id: 3,
+			title: "Test 3",
+			expireDate: "03.01.2021",
+			plannedEarning: 300,
+			isPaid: false
+		},
+		{
+			id: 4,
+			title: "Test 3",
+			expireDate: "03.01.2021",
+			plannedEarning: 300,
+			isPaid: false
+		},
+		{
+			id: 5,
+			title: "Test 3",
+			expireDate: "03.01.2021",
+			plannedEarning: 300,
+			isPaid: false
+		},
+		{
+			id: 6,
+			title: "Test 3",
+			expireDate: "03.01.2021",
+			plannedEarning: 300,
+			isPaid: false
+		},
+		{
+			id: 7,
+			title: "Test 3",
+			expireDate: "03.01.2021",
+			plannedEarning: 300,
+			isPaid: false
+		},
+		{
+			id: 8,
 			title: "Test 3",
 			expireDate: "03.01.2021",
 			plannedEarning: 300,

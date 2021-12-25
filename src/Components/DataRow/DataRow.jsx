@@ -7,30 +7,42 @@ import { AmountField } from "Components/InputField/InputField";
 const DataRow = ({ planCardData, onDelete }) => {
 
 	return (
-		<div >
+		<>
 			{planCardData.map((item) => (
 				<ul className="data-row" key={item.id}>
 					<li className="data-row__item flx--grow">
 						<p className="data-row__title">{item.title.charAt(0).toUpperCase() + item.title.slice(1)}</p>
 					</li>
 					<li className="data-row__item">
-						<p className="data-row__ex-date">{item.date}</p>
-					</li>
-					<li className="data-row__item">
-						<AmountField
-							name={"plannedEarning"}
-							value={item.plannedEarning}
-						/>
-					</li>
-					<li className="data-row__item">
-						<Checkbox paid={item.isPaid} onChecked={onDelete} />
-					</li>
-					<li className="data-row__item">
-						<DeleteButton onDelete={() => onDelete(item.id)} />
+						<ul className="data-row__data">
+							<li>
+								<ul className="data-row__data--left">
+									<li>
+										<p className="data-row__ex-date">{item.expireDate}</p>
+									</li>
+									<li>
+										<AmountField
+											name={"plannedEarning"}
+											value={item.plannedEarning}
+										/>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<ul className="data-row__data--right">
+									<li>
+										<Checkbox paid={item.isPaid} onChecked={onDelete} />
+									</li>
+									<li>
+										<DeleteButton onDelete={() => onDelete(item.id)} />
+									</li>
+								</ul>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			))}
-		</div>
+		</>
 	)
 
 }

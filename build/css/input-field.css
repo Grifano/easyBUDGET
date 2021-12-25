@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #e6cca9;
+  background-image: url("https://www.transparenttextures.com/patterns/retina-wood.png");
+  overflow: hidden;
+}
+
+#root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.show {
+  -webkit-animation-name: show;
+          animation-name: show;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+@-webkit-keyframes show {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+.hide {
+  -webkit-animation-name: hide;
+          animation-name: hide;
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+@-webkit-keyframes hide {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes hide {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.flx--grow {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.fullscreen {
+  height: 465px !important;
+  -webkit-box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.input-field__text {
+  max-height: 30px;
+  width: 100%;
+  font-size: 1.3rem;
+  line-height: 1;
+  padding: 0.5em 0.7em;
+  color: rgba(81, 45, 109, 0.7);
+  display: inline-block;
+  background: #ffffff;
+  border: 2px solid #fd6f96;
+  border-radius: 10px;
+  position: relative;
+}
+
+.input-field__text::-webkit-input-placeholder {
+  color: #c8c8c8;
+}
+
+.input-field__text:-ms-input-placeholder {
+  color: #c8c8c8;
+}
+
+.input-field__text::-ms-input-placeholder {
+  color: #c8c8c8;
+}
+
+.input-field__text::placeholder {
+  color: #c8c8c8;
+}
+
+.input-field__text:focus {
+  border: 2px solid transparent;
+  -webkit-box-shadow: 0 0 0 3px rgba(81, 45, 109, 0.7);
+          box-shadow: 0 0 0 3px rgba(81, 45, 109, 0.7);
+}
+
+.input-field__text[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 2px;
+  right: 8px;
+  cursor: pointer;
+  background-image: url("../../Assets/calendar.svg");
+}
+
+.input-field__number {
+  max-height: 30px;
+  width: 110px;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1;
+  padding: 5px 19px 5px 9px;
+  color: #828282;
+  display: inline-block;
+  background: #ffffff;
+  border: 2px solid #512d6d;
+  border-radius: 5px;
+  position: relative;
+}
+
+.input-field__number::after {
+  content: "zl";
+  background-color: #000;
+  font-size: 0.5rem;
+  display: block;
+  width: 10px;
+  height: 10px;
+  top: 5px;
+  right: 5px;
+  position: absolute;
+  z-index: 10;
+}
+
+.input-field__number::-webkit-input-placeholder {
+  color: #828282;
+}
+
+.input-field__number:-ms-input-placeholder {
+  color: #828282;
+}
+
+.input-field__number::-ms-input-placeholder {
+  color: #828282;
+}
+
+.input-field__number::placeholder {
+  color: #828282;
+}
+
+.input-field__number:focus {
+  border: 2px solid transparent;
+  -webkit-box-shadow: 0 0 0 3px #fd6f96;
+          box-shadow: 0 0 0 3px #fd6f96;
+}

@@ -29,5 +29,8 @@
 				background-color: rgba(0, 0, 0, 0.3);
 			}
 		}
+		@media (max-width: 475px) {
+			padding: 40px 6vw 70px;
+		}
 	}
 }
