@@ -16,43 +16,54 @@
 	color: $text-light-color;
 	cursor: pointer;
 	transition: all 0.3s ease 0s;
-	&:hover {
-		//? Should be tested on PlanCard
-		box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
-		transform: translateY(-2px);
-	}
-	&:active {
-		transform: translateY(0px);
+	// Enable hover just for large screens
+	@media (min-width: 991px) {
+		&:hover {
+			box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+			transform: translateY(-2px);
+		}
+		&:active {
+			transform: translateY(0px);
+		}
 	}
 }
 .main-button--red {
 	background: $zone-red--light;
 	border-color: $zone-red !important;
-	&:hover {
-		box-shadow: 0px 3px 10px $zone-red;
-	}
-	&:active {
-		box-shadow: none;
+	// Enable hover just for large screens
+	@media (min-width: 991px) {
+		&:hover {
+			box-shadow: 0px 3px 10px $zone-red;
+		}
+		&:active {
+			box-shadow: none;
+		}
 	}
 }
 .main-button--orange {
 	background: $zone-orange--light;
 	border-color: $zone-orange !important;
-	&:hover {
-		box-shadow: 0px 3px 10px $zone-orange;
-	}
-	&:active {
-		box-shadow: none;
+	// Enable hover just for large screens
+	@media (min-width: 991px) {
+		&:hover {
+			box-shadow: 0px 3px 10px $zone-orange;
+		}
+		&:active {
+			box-shadow: none;
+		}
 	}
 }
 .main-button--green {
 	background: $zone-green--light;
 	border-color: $zone-green !important;
-	&:hover {
-		box-shadow: 0px 3px 10px $zone-green;
-	}
-	&:active {
-		box-shadow: none;
+	// Enable hover just for large screens
+	@media (min-width: 991px) {
+		&:hover {
+			box-shadow: 0px 3px 10px $zone-green;
+		}
+		&:active {
+			box-shadow: none;
+		}
 	}
 }
 .expand-button {
@@ -130,12 +141,15 @@
 		height: auto;
 		object-fit: cover;
 	}
-	&:hover {
-		box-shadow: 0px 3px 10px rgba(81, 45, 109, 0.6);
-		transform: translateY(-2px);
-	}
-	&:active {
-		box-shadow: none;
-		transform: translateY(0px);
+	// Enable hover just for large screens
+	@media (min-width: 991px) {
+		&:hover {
+			box-shadow: 0px 3px 10px rgba(81, 45, 109, 0.6);
+			transform: translateY(-2px);
+		}
+		&:active {
+			box-shadow: none;
+			transform: translateY(0px);
+		}
 	}
 }

@@ -21,7 +21,7 @@ body {
 	// background-image: url("https://www.transparenttextures.com/patterns/fresh-snow.png");
 	// background-image: url("https://www.transparenttextures.com/patterns/purty-wood.png");
 	background-image: url("https://www.transparenttextures.com/patterns/retina-wood.png");
-	overflow: hidden;
+	overflow: auto;
 }
 #root {
 	display: grid;
@@ -55,6 +55,7 @@ body {
 	}
 }
 .hide {
+	display: none;
 	animation-name: hide;
 	animation-duration: 0.2s;
 	opacity: 0;

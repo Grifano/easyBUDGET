@@ -1,10 +1,11 @@
 @import "../../styles.scss";
 
 .data-row {
-	max-width: 542px;
 	display: inline-flex;
 	color: $data-row-item--text;
 	margin-bottom: 15px;
+	padding-bottom: 10px;
+	border-bottom: 1px dashed;
 	@media (max-width: 768px) {
 		max-width: none;
 		padding-bottom: 10px;
@@ -14,10 +15,10 @@
 		flex-direction: column;
 	}
 	&__title {
-		font-size: 25px;
+		font-size: 2.1rem;
 		padding-right: 10px;
 		@media (max-width: 475px) {
-			font-size: 20px;
+			font-size: 1.5rem;
 			padding-right: 5px;
 		}
 	}

@@ -11,7 +11,6 @@ const App = () => {
 		<>
 			<Aside isMobile={isMobile} />
 			<Desk isMobile={isMobile} />
-			{/* <Footer /> */}
 		</>
 	)
 };

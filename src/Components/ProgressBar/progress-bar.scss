@@ -44,6 +44,12 @@
 		font-weight: bold;
 		fill: #ffffff;
 	}
+	@media (max-width: 475px) {
+		width: 100px;
+		height: 100px;
+		top: -20px;
+		left: 20px;
+	}
 }
 .progress-bar--red {
 	border-color: $zone-red;

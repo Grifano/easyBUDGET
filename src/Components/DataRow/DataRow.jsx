@@ -10,10 +10,9 @@ const DataRow = ({ planCardData, onDelete }) => {
 	return (
 		<>
 			{planCardData.map((item) => (
-				<ul className="data-row" key={item.id}>
+				<ul className="data-row" key={item.id} >
 					<li className="data-row__item flx--grow">
-						{/* <p className="data-row__title">{item.title.charAt(0).toUpperCase() + item.title.slice(1)}</p> */}
-						<p className="data-row__title">{item.title}</p>
+						<p className="data-row__title">{item.title.charAt(0).toUpperCase() + item.title.slice(1)}</p>
 					</li>
 					<li className="data-row__item">
 						<ul className="data-row__data">
@@ -21,7 +20,6 @@ const DataRow = ({ planCardData, onDelete }) => {
 								<ul className="data-row__data--left">
 									<li>
 										<DateField value={item.expireDate} />
-										{/* <p className="data-row__ex-date">{item.expireDate}</p> */}
 									</li>
 									<li>
 										<AmountField
@@ -44,7 +42,8 @@ const DataRow = ({ planCardData, onDelete }) => {
 						</ul>
 					</li>
 				</ul>
-			))}
+			))
+			}
 		</>
 	)
 
